@@ -187,10 +187,11 @@ OR empno LIKE '78%';
 SELECT *
 FROM emp
 WHERE job = 'SALESMAN'
-OR  empno BETWEEN 7800 AND 7899;
+OR empno LIKE '78%'
+AND hiredate >= TO_DATE('19810601', 'YYYYMMDD');
 
 SELECT *
 FROM emp
 WHERE job = 'SALESMAN'
-OR empno LIKE '78%'
-AND hiredate >= TO_DATE('19810601', 'YYYYMMDD');
+OR  empno BETWEEN 7800 AND 7899;
+
