@@ -144,9 +144,9 @@ WHERE deptno IN ( SELECT deptno
 SELECT *
 FROM  product  
 WHERE NOT EXISTS (SELECT *
-                    FROM cycle
-                    WHERE cid = 1
-                    AND product.pid = cycle.pid);
+                  FROM cycle
+                  WHERE cid = 1
+                  AND product.pid = cycle.pid);
                     
 --집합연산
 -- UNION : 합집합 중복을 제거
